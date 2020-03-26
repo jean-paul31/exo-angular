@@ -1,0 +1,13 @@
+<a href="#" class="list-group-item clearfix" (click)="onRecetteSelected()" >
+  <div class="float-left">
+    <h4 class="list-group-item-heading">{{ recette.name }}</h4>
+    <p class="list-group-item-text">{{ recette.description }}</p>
+  </div>
+  <span class="float-right">
+    <img
+    src= "{{recette.UrlImage}}"
+     class="img-responsive"
+      alt= "{{recette.name}}"
+       style="max-height: 48px;">
+  </span>
+</a>
