@@ -12,7 +12,7 @@ export class ShoppingListComponent implements OnInit {
           new Ingredient('Pistache', 45),
           new Ingredient('sel', 16),
           new Ingredient('poivre', 99),
-          new Ingredient('Vanille', 40)
+          new Ingredient('Vanille', 40),
         ];
 
   constructor() { }
