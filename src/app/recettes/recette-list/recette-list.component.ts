@@ -1,5 +1,6 @@
 import { Component, OnInit,Output, EventEmitter } from '@angular/core';
 import { Recette } from '../recette.model';
+import { RecetteService } from '../recette.service';
 
 @Component({
   selector: 'app-recette-list',
@@ -8,27 +9,28 @@ import { Recette } from '../recette.model';
 })
 export class RecetteListComponent implements OnInit {
 
-  @Output() recetteWasSelected = new EventEmitter<Recette>();
+  // @Output() recetteWasSelected = new EventEmitter<Recette>();
+    recettes: Recette[] = [];
+  //  = [
+  //   new Recette('SO6',
+  //               'Blablabla',
+  //               'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRIC853_giUjSLRNrrzxUFCaHObn4CPwZwMshoBXSE-l3pEwQ1D'
+  //               ),
+  //             new Recette(
+  //               'SUPER',
+  //               'blabla2',
+  //               'https://www.ebike-generation.com/img/catalogue/moto/harley-davidson-livewire.jpg'
+  //             )];
 
-  recettes: Recette[] = [
-    new Recette('SO6',
-                'Blablabla',
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRIC853_giUjSLRNrrzxUFCaHObn4CPwZwMshoBXSE-l3pEwQ1D'
-                ),
-              new Recette(
-                'SUPER',
-                'blabla2',
-                'https://www.ebike-generation.com/img/catalogue/moto/harley-davidson-livewire.jpg'
-              )];
 
+  constructor(private recetteService: RecetteService) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit():void {
+    this.recettes = this.recetteService.getRecettes();
   }
 
-  onRecetteSelected(recette: Recette){
-    this.recetteWasSelected.emit(recette)
-  }
+  // onRecetteSelected(recette: Recette){
+  //   this.recetteWasSelected.emit(recette)
+  // }
 
 }
