@@ -31,6 +31,9 @@ export class RecetteService {
                                               ]
                                             )
                                 ];
+  getRecette(index: number){
+    return this.recettes[index];
+  }
   getRecettes(){
     return this.recettes.slice();
   }

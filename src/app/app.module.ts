@@ -12,6 +12,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { DropdownDirective } from './dropdown.directive';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { RecetteStartComponent } from './recettes/recette-start/recette-start.component';
 
 
 
@@ -25,7 +26,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     RecetteItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropdownDirective
+    DropdownDirective,
+    RecetteStartComponent
 
   ],
   imports: [
